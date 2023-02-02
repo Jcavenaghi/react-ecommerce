@@ -1,4 +1,4 @@
-import logo from '../assets/logo-parfum.svg';
+import logo from '../../assets/logo-parfum.svg'
 function CartWidget() {
     return (
         <img src= {logo}
@@ -9,4 +9,4 @@ function CartWidget() {
     );
 }
 
-export default CartWidget
+export { CartWidget }

@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name":"Y",
+        "marca": "yves saint laurent",
+        "descr": "EDP x 100ML",
+        "price": "32.800",
+        "img": "y-yves-saint-laurent.png"
+    },
+    {
+        "id": 2,
+        "name":"Acqua di Giò Profumo",
+        "marca": "Giorgio Armani",
+        "descr": "EDP x 75ML",
+        "price": "30.000",
+        "img": "acqua.png"
+    },
+    {
+        "id": 3,
+        "name":"Sauvage",
+        "marca": "Dior",
+        "descr": "EDT x 100ML",
+        "price": "34.476",
+        "img": "sauvage.png"
+    },
+    {
+        "id": 4,
+        "name":"212 Héroes",
+        "marca": "Carolina Herrera",
+        "descr": "EDT x 90ML",
+        "price": "27.045",
+        "img": "212.png"
+    },    
+    {
+        "id": 5,
+        "name":"Bad Boy Le Parfum",
+        "marca": "Carolina Herrera",
+        "descr": "EDP x 100ML",
+        "price": "32.670",
+        "img": "bad-boy.png"
+    },
+    {
+        "id": 6,
+        "name":"Invictus",
+        "marca": "Paco Rabanne",
+        "descr": "EDT x 50ML",
+        "price": "24.878",
+        "img": "invictus.png"
+    },
+    {
+        "id": 7,
+        "name":"Polo Red",
+        "marca": "Ralph Lauren",
+        "descr": "EDT x 125ML",
+        "price": "26.010",
+        "img": "polo-red-men-edt.jpg"
+    },
+    {
+        "id": 8,
+        "name":"Polo",
+        "marca": "Ralph Lauren",
+        "descr": "EDT x  118ML",
+        "price": "26.010",
+        "img": "polo-men-edt.jpg"
+    },
+    {
+        "id": 9,
+        "name":"Phantom",
+        "marca": "Paco Rabanne",
+        "descr": "EDT x 100ML",
+        "price": "31.095",
+        "img": "Phantom-PacoR.png"
+    },
+    {
+        "id": 10,
+        "name":"One Million",
+        "marca": "Paco Rabanne",
+        "descr": "EDT x 100ML",
+        "price": "32000",
+        "img": "one-million.png"
+    },
+    {
+        "id": 11,
+        "name":"Gentleman",
+        "marca": "Givenchy",
+        "descr": "EDT x 100ML",
+        "price": "35000",
+        "img": "gentleman-givenchy.png"
+    },
+    {
+        "id": 12,
+        "name":"La Nuit de L'Homme Bleu Électrique",
+        "marca": "yves saint laurent",
+        "descr": "EDP x 50ML",
+        "price": "25.500",
+        "img": "la-nuit.png"
+    }
+]
