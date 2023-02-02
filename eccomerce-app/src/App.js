@@ -3,32 +3,29 @@ import './App.css';
 /* importante para los estilos de bootstrap */
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import { PerfumesView } from './components/perfums/PerfumesView'
+
+import { ItemListContainer } from './components/main/ItemListContainer'
+
+import { PerfumeDetalle } from './components/itemDetail/PerfumeDetalle'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import { NavBar } from './components/header/NavBar';
 
 function App() {
   return (
-    
-    <div className="App">
+    <BrowserRouter>
       <NavBar/>
-      <div className='App-body'> 
-
-      
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
-     <ItemListContainer greeting="Bienvenido!"/>
-    </div>
+      <Routes>
+        <Route path="/" element= {<PerfumeDetalle />} />
+        <Route path="/" element= {<PerfumeDetalle />} />
+        <Route path="/category/:id" element= {<PerfumeDetalle /> }/> 
+        <Route path="/item/:id" element= {<PerfumeDetalle />} />
+      </Routes>
+      <PerfumesView/>
+      <ItemListContainer greeting="hola"/>
+    </BrowserRouter>
   );
 }
 
