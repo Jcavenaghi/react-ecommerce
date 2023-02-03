@@ -2,6 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { CartWidget } from '../logo/CartWidget';
+import { LinkContainer } from 'react-router-bootstrap';
+import { NavbarBrand } from 'react-bootstrap';
 
 
 function NavBar() {
@@ -10,11 +12,23 @@ function NavBar() {
       <header>
         <Navbar bg="dark" variant="dark">
           <Container>
-            <Nav.Link href='#home'>la parfumerie</Nav.Link>
+            <LinkContainer to={"/"}>
+              <NavbarBrand>la parfumerie</NavbarBrand>
+            </LinkContainer>
             <Nav className="me-auto">
-              <Nav.Link href="#home">Inicio</Nav.Link>
-              <Nav.Link href="#perfumes">Perfumes</Nav.Link>
-              <Nav.Link href="#tiendas">Contacto</Nav.Link>
+              <LinkContainer to= {"/perfumes"}>
+                <Nav.Link>Perfumes</Nav.Link>
+                </LinkContainer>
+
+              <LinkContainer to= "/category/1">
+                <Nav.Link >Masculinos</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to= "/category/2">
+                <Nav.Link >Femeninos</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to= "/contact">
+                <Nav.Link >Contacto</Nav.Link>
+              </LinkContainer>
             </Nav>
             <CartWidget/>
           </Container>

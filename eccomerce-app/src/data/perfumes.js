@@ -1,4 +1,4 @@
-[
+export const perfumes = [
     {
         "id": 1,
         "name":"Y",
@@ -94,5 +94,5 @@
         "descr": "EDP x 50ML",
         "price": "25.500",
         "img": "la-nuit.png"
-    }
-]
+    },
+];

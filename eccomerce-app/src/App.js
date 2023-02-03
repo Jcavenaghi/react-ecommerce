@@ -9,6 +9,10 @@ import { ItemListContainer } from './components/main/ItemListContainer'
 
 import { PerfumeDetalle } from './components/itemDetail/PerfumeDetalle'
 
+import { Contact } from './components/contact/Contact';
+
+import { PerfumeCategory } from './components/categories/PerfumeCategory';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { NavBar } from './components/header/NavBar';
@@ -18,12 +22,14 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path="/" element= {<PerfumeDetalle />} />
-        <Route path="/" element= {<PerfumeDetalle />} />
-        <Route path="/category/:id" element= {<PerfumeDetalle /> }/> 
-        <Route path="/item/:id" element= {<PerfumeDetalle />} />
+        <Route path="/" element= {<ItemListContainer greeting="bienvenido!" />} />
+        <Route path="/perfumes" element= {<PerfumesView /> } />
+        <Route path="/contact" element= {<Contact /> } />
+
+        <Route path="/category/:categoryId" element= {<PerfumeCategory /> }/> 
+        <Route path="/item/:itemId" element= {<PerfumeDetalle />} />
       </Routes>
-      <PerfumesView/>
+      
       <ItemListContainer greeting="hola"/>
     </BrowserRouter>
   );
