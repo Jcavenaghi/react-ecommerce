@@ -17,7 +17,7 @@ function PerfumesView() {
   }, []) // [] quiere decir que se realiza on mount, cada vez que se carga. 
   return (
     <Container className='mt-4 Main'>
-      <Row className="row-cols-sm-1 row-cols-md-2 g-4">
+      <Row className="row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
         {articles.map(art => 
           <Col className='Main-card'>
             <Perfume id={art.id} image={`/images/${art.img}`}  title={art.name}  marca={art.marca} descr={art.descr} />

@@ -22,15 +22,13 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <Routes>
-        <Route path="/" element= {<ItemListContainer greeting="bienvenido!" />} />
+        <Route path="/" element= {<ItemListContainer greeting='BIENVENIDO A LA TIENDA ONLINE DE "LA PARFUMERIE"' />} />
         <Route path="/perfumes" element= {<PerfumesView /> } />
         <Route path="/contact" element= {<Contact /> } />
 
         <Route path="/category/:categoryId" element= {<PerfumeCategory /> }/> 
         <Route path="/item/:itemId" element= {<PerfumeDetalle />} />
       </Routes>
-      
-      <ItemListContainer greeting="hola"/>
     </BrowserRouter>
   );
 }

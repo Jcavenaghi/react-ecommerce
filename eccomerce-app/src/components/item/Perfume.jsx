@@ -1,15 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import './Perfume.css'
 import { Link } from 'react-router-dom';
 
 function Perfume(props) {
   return (
-    <Card className="card-perfume" style={{ width: '22rem'}}>
-      <Card.Img className="card-img" variant="top" src= {props.image} />
+    <Card className="card-perfume">
+      <Card.Img className="card-img" variant="top" src= {props.image}/>
       <Card.Body>
-        <Card.Title>
-          <Link to={`/item/${props.id}`}>
+        <Card.Title className="card-text" >
+          <Link to={`/item/${props.id}`} style={{ textDecoration: 'none' }}>
             { props.title }
           </Link>
         </Card.Title>
