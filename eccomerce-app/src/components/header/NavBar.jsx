@@ -30,7 +30,9 @@ function NavBar() {
                 <Nav.Link >Contacto</Nav.Link>
               </LinkContainer>
             </Nav>
-            <CartWidget/>
+            <LinkContainer to= "/chart">
+                <Nav.Link ><CartWidget/></Nav.Link>
+            </LinkContainer>
           </Container>
           
         </Navbar>

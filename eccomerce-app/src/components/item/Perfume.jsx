@@ -5,12 +5,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState, useContext } from "react";
 import { CartContext } from '../context/cartProvider';
 function Perfume(props) {
-  const [stock, setStock]  = useState();
-  const { total, setTotal } = useContext(CartContext);
-  function addToCart() {
-    setStock(stock - 1);
-    setTotal(total+ 1)
-  }
+  const { addItem } = useContext(CartContext);
+  
   return (
     <Card className="card-perfume">
       <Card.Img className="card-img" variant="top" src= {props.image}/>
@@ -24,10 +20,11 @@ function Perfume(props) {
           {props.marca}. { props.descr }.
         </Card.Text>
         <Card.Text className="card-text">
+          $ {props.price}
         </Card.Text>
         { props.stock > 0
-          ? <Button variant="primary" onClick={addToCart}>+</Button>
-          : <Card.Text className="card-text">Sin stock {props.stock} </Card.Text>}
+          ? <Button variant="primary" onClick={() => addItem({id: props.id, title: props.title, marca: props.marca, descr: props.descr, price: props.price, cant: 1} ) }>+</Button>
+          : <Card.Text className="card-text">Sin stock</Card.Text>}
       </Card.Body>
     </Card>
   );

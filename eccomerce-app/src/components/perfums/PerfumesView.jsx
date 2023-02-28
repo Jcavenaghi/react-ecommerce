@@ -20,7 +20,7 @@ function PerfumesView() {
       <Row className="row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
         {articles.map(art => 
           <Col className='Main-card'>
-            <Perfume id={art.id} image={`/images/${art.img}`}  title={art.name}  marca={art.marca} descr={art.descr} stock= {art.stock}/>
+            <Perfume id={art.id} image={`/images/${art.img}`}  title={art.name}  marca={art.marca} descr={art.descr} stock= {art.stock} price={art.price}/>
           </Col>
         )}
       </Row>
