@@ -1,0 +1,23 @@
+.card-img{
+    width: 100%;
+    height: 500px;
+  }
+  @supports(object-fit: cover){
+      .card-img{
+        height: 500px;
+        object-fit: contain;
+        object-position: center center;
+      }
+    }
+
+.card-perfume {
+    width: 26rem;
+    height: 700px;
+    
+}
+
+.card-text {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
