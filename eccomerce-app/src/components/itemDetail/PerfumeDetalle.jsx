@@ -26,6 +26,7 @@ function PerfumeDetalle () {
                 marca={perfume && perfume.marca} 
                 descr={perfume && perfume.descr}
                 stock={perfume && perfume.stock} 
+                price={perfume && perfume.price}
             />
 
     );
