@@ -1,0 +1,14 @@
+.chart-button {
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-delay: .5s;
+    opacity: 75%;
+}
+
+.chart-button:hover {
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-delay:  0.5s;
+    opacity: 100%;
+
+}

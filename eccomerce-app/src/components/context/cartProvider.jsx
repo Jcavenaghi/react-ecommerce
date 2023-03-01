@@ -17,7 +17,7 @@ export function CartProvider({ defaultValue= 0, children }) {
         } else {
             productos.push(obj)
         }
-        setTotalPrice(totalPrice + parseFloat(obj.price))
+        setTotalPrice(totalPrice + obj.price)
     }
 
     function deleteItem(objId) {
@@ -25,19 +25,18 @@ export function CartProvider({ defaultValue= 0, children }) {
             return objId !== id
         })
         setTotal(total--)
-        console.log("eliminar")
     }
 
     function emptyChart() {
         setItem([])
         setTotal(0)
-        console.log("vaciar")
+        setTotalPrice(0)
     }
 
     function endBought() {
         setItem([])
         setTotal(0)
-        console.log("comprado")
+        setTotalPrice(0)
     }
 
     return (

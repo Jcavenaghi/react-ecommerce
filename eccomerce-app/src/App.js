@@ -15,9 +15,11 @@ import { PerfumeCategory } from './components/categories/PerfumeCategory';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { ChartView } from './components/chart/ChartView';
+import { CartView } from './components/chart/CartView';
 
 import { NavBar } from './components/header/NavBar';
+
+import { PurchaseForm } from './components/form/PurchaseForm';
 
 
 import { CartProvider } from './components/context/cartProvider';
@@ -32,7 +34,8 @@ function App() {
           <Route path="/contact" element= {<Contact /> } />
           <Route path="/category/:categoryId" element= {<PerfumeCategory /> }/> 
           <Route path="/item/:itemId" element= {<PerfumeDetalle />} />
-          <Route path="/chart" element= {<ChartView/>} />
+          <Route path="/cart" element= {<CartView/>} />
+          <Route path="/purchaseForm" element= {<PurchaseForm/>} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
