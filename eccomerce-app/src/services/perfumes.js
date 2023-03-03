@@ -1,11 +1,12 @@
-import {getFirestore, doc, addDoc, getDoc, getDocs, collection} from 'firebase/firestore'
+import {getFirestore, doc, addDoc, getDoc, getDocs, collection, query, where, updateDoc, arrayUnion, increment} from 'firebase/firestore'
 
-const getByCategory = (cat) => {
+
+// const getByCategory = (cat) => {
     
-}
+// }
 
 const getAll = async () => {
-    const db = getFirestore();
+    const db = getFirestore()
     const perfumeCollection = collection(db, 'perfumes')
     const snapshot = await getDocs(perfumeCollection);
     const perfumes = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
@@ -14,7 +15,7 @@ const getAll = async () => {
 
 
 const getById = async (id) => {
-    const db = getFirestore();
+    const db = getFirestore()
     const perfume = doc(db, 'perfumes', id);
     const snapshot = await getDoc(perfume);
    return {id: snapshot.id, ...snapshot.data()};
@@ -29,4 +30,37 @@ const add = async (order) => {
     return response.id
 }
 
-export const perfumesService = {getAll, getById, getByCategory, add}
+const getCartById = async (id) => {
+    const db = getFirestore()
+    const cart = doc(db, 'carts', id);
+    const snapshot = await getDoc(cart);
+   return {id: snapshot.id, ...snapshot.data()};
+}
+
+
+const addCart = async (cart) => {
+    const db = getFirestore()
+    const cartsCollection = collection(db, "carts")
+    const response = await addDoc(cartsCollection, cart)
+    return response
+}
+
+const updateCartWithNewItem  = async (id, item, monto) => {
+    const db = getFirestore()
+    const cart = doc(db, "carts", id)
+    console.log(cart)
+    updateDoc (cart, {'items': arrayUnion(item)})
+    updateDoc (cart, {'total': increment(monto)})
+    updateDoc (cart, {'totalItems': increment(1)})
+}
+
+const updateCart= async (id, items, monto) => {
+    const db = getFirestore()
+    const cart = doc(db, "carts", id)
+    updateDoc (cart, {'items': items})
+    updateDoc (cart, {'total': increment(monto)}) 
+    updateDoc (cart, {'totalItems': increment(1)})
+}
+
+
+export const perfumesService = {getAll, getById, add, addCart, getCartById, updateCart, updateCartWithNewItem}
