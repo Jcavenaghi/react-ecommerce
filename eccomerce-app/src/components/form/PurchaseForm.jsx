@@ -39,7 +39,10 @@ function PurchaseForm() {
         text: `Muchas gracias ${buyer.name} por su compra. \n Su orden de compra es: ${response.id}`,
         icon: "success",
         button: "Ok",
+      }).then((result) => {
+        window.location.replace('/')
       }))
+     
   };
 
   return (

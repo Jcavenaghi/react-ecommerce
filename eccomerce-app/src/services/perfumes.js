@@ -21,6 +21,18 @@ const getById = async (id) => {
    return {id: snapshot.id, ...snapshot.data()};
 }
 
+const getByCategory = async (cat) => {
+
+    const db = getFirestore()
+    const perfumeCollection = collection(db, 'perfumes')
+    const q = query(perfumeCollection, where("category", "==", parseInt(cat)));
+    const resultados = await getDocs(q);
+    console.log(resultados.docs)
+    const perfumes = resultados.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    console.log(perfumes)
+    return perfumes
+}
+
 /* metodos para orders */
 
 const add = async (order) => {
@@ -90,4 +102,4 @@ const deleteItem = async (id, items, monto) => {
 
 }
 
-export const perfumesService = {getAll, getById, add, addCart, getCartById, updateCart, updateCartWithNewItem, deleteCart, deleteItem}
+export const perfumesService = {getAll, getById,getByCategory, add, addCart, getCartById, updateCart, updateCartWithNewItem, deleteCart, deleteItem}

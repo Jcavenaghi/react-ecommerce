@@ -55,6 +55,7 @@ export function CartProvider({ defaultValue= 0, children }) {
     function deleteItem(objId) {
         let i = productos.findIndex(prod => prod.id === objId)
         productos[i].cant = productos[i].cant - 1
+        setTotalPrice(totalPrice - productos[i].price)
         perfumesService.deleteItem(cartId, productos, productos[i].price)
         if (productos[i].cant === 0) {
             productos.splice(i,1)
@@ -91,6 +92,7 @@ export function CartProvider({ defaultValue= 0, children }) {
         setTotal(0)
         setTotalPrice(0)
         localStorage.clear()
+        
     }
     return (
         <CartContext.Provider value={{total, setTotal, totalPrice, setTotalPrice, productos ,setItem, addItem, deleteItem, emptyChart, endBought, loadCartFromLocalStorage}}>
