@@ -8,7 +8,7 @@ import './CartView.css'
 import { PurchaseForm } from "../form/PurchaseForm";
 
 function CartView() {
-    const  { productos, totalPrice, endBought, emptyChart }  = useContext(CartContext)
+    const  { productos, totalPrice, emptyChart }  = useContext(CartContext)
     return (
         <>
             <div className="container">

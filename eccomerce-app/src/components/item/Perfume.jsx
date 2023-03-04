@@ -23,7 +23,7 @@ function Perfume(props) {
           $ {props.price}
         </Card.Text>
         { props.stock > 0
-          ? <Button variant="primary" onClick={() => addItem({id: props.id, title: props.title, marca: props.marca, descr: props.descr, price: props.price, cant: 1} ) }>+</Button>
+          ? <Button variant="dark" className="chart-button btn-block w-100 fw-bold" onClick={() => addItem({id: props.id, title: props.title, marca: props.marca, descr: props.descr, price: props.price, cant: 1} ) }>Añadir al carrito</Button>
           : <Card.Text className="card-text">Sin stock</Card.Text>}
       </Card.Body>
     </Card>

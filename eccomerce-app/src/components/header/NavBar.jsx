@@ -11,7 +11,6 @@ function NavBar() {
   const { loadCartFromLocalStorage } = useContext(CartContext)
 
   useEffect(() => {
-    console.log("Renderizado!")
     loadCartFromLocalStorage();
   }, []);  
   return (
