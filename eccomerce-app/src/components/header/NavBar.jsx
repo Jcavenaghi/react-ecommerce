@@ -4,9 +4,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import { CartWidget } from '../logo/CartWidget';
 import { LinkContainer } from 'react-router-bootstrap';
 import { NavbarBrand } from 'react-bootstrap';
-
+import { CartContext } from '../context/cartProvider';
+import { useContext, useEffect } from 'react';
 
 function NavBar() {
+  const { loadCartFromLocalStorage } = useContext(CartContext)
+
+  useEffect(() => {
+    loadCartFromLocalStorage();
+  }, []);  
   return (
     <>
       <header>
