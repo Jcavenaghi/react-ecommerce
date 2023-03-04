@@ -32,9 +32,6 @@ function NavBar() {
               <LinkContainer to= "/category/2">
                 <Nav.Link >Femeninos</Nav.Link>
               </LinkContainer>
-              <LinkContainer to= "/contact">
-                <Nav.Link >Contacto</Nav.Link>
-              </LinkContainer>
             </Nav>
             <LinkContainer to= "/cart">
                 <Nav.Link ><CartWidget/></Nav.Link>
