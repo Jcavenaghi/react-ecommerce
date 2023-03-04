@@ -24,20 +24,24 @@ import { Footer } from './components/footer/Footer'
 import { CartProvider } from './components/context/cartProvider';
 function App() {
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <NavBar/>
-        <Routes>
-          <Route path="/" element= {<ItemListContainer greeting='BIENVENIDO A LA TIENDA ONLINE DE "LA PARFUMERIE"' />} />
-          <Route path="/perfumes" element= {<Perfumes/> } />
-          <Route path="/category/:categoryId" element= {<PerfumeCategory /> }/> 
-          <Route path="/item/:itemId" element= {<PerfumeDetalle />} />
-          <Route path="/cart" element= {<CartView/>} />
-          <Route path="/purchaseForm" element= {<PurchaseForm/>} />
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
-    </CartProvider>
+    <>
+      <div className='App'>
+        <CartProvider>
+          <BrowserRouter>
+            <NavBar/>
+            <Routes>
+              <Route path="/" element= {<ItemListContainer greeting='BIENVENIDO A LA TIENDA ONLINE DE "LA PARFUMERIE"' />} />
+              <Route path="/perfumes" element= {<Perfumes/> } />
+              <Route path="/category/:categoryId" element= {<PerfumeCategory /> }/> 
+              <Route path="/item/:itemId" element= {<PerfumeDetalle />} />
+              <Route path="/cart" element= {<CartView/>} />
+              <Route path="/purchaseForm" element= {<PurchaseForm/>} />
+            </Routes>
+            <Footer/>
+          </BrowserRouter>
+        </CartProvider>
+      </div>
+    </>
   );
 }
 

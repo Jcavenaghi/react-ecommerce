@@ -1,3 +1,11 @@
+# Idea del proyecto
+
+La idea de este proyecto fue realizar una página web de una perfumeria, donde puedes elegir entre perfumes de mujer o de hombre.
+Contiene un carrito y un proceso de compra, ademas de diferentes secciones donde se pueden sumar y restar items.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
